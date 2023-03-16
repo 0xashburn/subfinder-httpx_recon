@@ -38,7 +38,15 @@ jobs:
       run: |
         cat subfinder_output.txt crt.txt | grep -v www | uniq -u | tee -a sorted_domains.txt
       shell: bash
-
+   
+    - name: Save results
+      uses: actions/upload-artifact@v2
+      with:
+        name: Subdomains results
+        path: |
+          subfinder_output.txt
+          crt.txt
+          sorted_domains.txt
   HTTPX:
     runs-on: ubuntu-latest
     needs: subdomains
@@ -70,3 +78,11 @@ jobs:
         cat sorted_domains.txt | httpx | tee -a normalhttpx.txt
       shell: bash 
 
+    - name: Save results
+      uses: actions/upload-artifact@v2
+      with:
+        name: HTTPX results
+        path: |
+          detailed_httpx.txt
+          200httpx.txt
+          normalhttpx.txt
