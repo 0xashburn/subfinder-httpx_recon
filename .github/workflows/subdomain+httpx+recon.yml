@@ -6,8 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'sharda.ac.in'
-
+  DOMAIN: 'upstox.com'
 jobs:
   subdomains:
     runs-on: ubuntu-latest
