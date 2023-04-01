@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'microsoft.com'
+  DOMAIN: 'nl'
 jobs:
   subdomains:
     runs-on: ubuntu-latest
