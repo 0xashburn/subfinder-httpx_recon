@@ -28,24 +28,14 @@ jobs:
       run: |
         subfinder -d $DOMAIN -o subfinder_output.txt
       shell: bash
-    - name: Run crt.sh
-      run: |
-        curl -s "https://crt.sh/?q=%25.$DOMAIN&output=json" | jq -r '.[].name_value' | sed 's/\*\.//g' | sort -u | tee -a crt.txt
-      shell: bash
-    
-    - name: Sort Sub-domains
-      run: |
-        cat subfinder_output.txt crt.txt | grep -v www | uniq -u | tee -a sorted_domains.txt
-      shell: bash
-   
+      
     - name: Save results
       uses: actions/upload-artifact@v2
       with:
         name: Subdomains results
         path: |
           subfinder_output.txt
-          crt.txt
-          sorted_domains.txt
+
   HTTPX:
     runs-on: ubuntu-latest
     needs: subdomains
@@ -66,15 +56,15 @@ jobs:
 
     - name: HTTPX_Detailed 
       run: |
-        cat sorted_domains.txt | httpx -sc -title -server | tee -a detailed_httpx.txt
+        cat subfinder.txt | httpx -sc -title -server | tee -a detailed_httpx.txt
       shell: bash
     - name: HTTPX_Live for endpoint
       run: | 
-        cat sorted_domains.txt | httpx -mc 200 | tee -a 200httpx.txt
+        cat subfinder.txt | httpx -mc 200 | tee -a 200httpx.txt
       shell: bash
     - name: httpx for all - no filtering
       run: |
-        cat sorted_domains.txt | httpx | tee -a normalhttpx.txt
+        cat subfinder.txt | httpx | tee -a normalhttpx.txt
       shell: bash 
 
     - name: Save results
