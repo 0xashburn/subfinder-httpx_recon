@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'upstox.com'
+  DOMAIN: 'microsoft.com'
 jobs:
   subdomains:
     runs-on: ubuntu-latest
