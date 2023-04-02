@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'asus.com'
+  DOMAIN: 'gap.com'
 
 jobs:
   subdomains:
