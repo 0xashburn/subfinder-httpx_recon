@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'gov.uk'
+  DOMAIN: 'canva.com'
 
 jobs:
   subdomains:
