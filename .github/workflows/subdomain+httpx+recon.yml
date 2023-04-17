@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'indrive.com'
+  DOMAIN: 'rapyd.net'
 
 jobs:
   subdomains:
