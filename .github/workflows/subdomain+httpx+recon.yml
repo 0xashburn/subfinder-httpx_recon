@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'rapyd.net'
+  DOMAIN: 'btrc.gov.bd'
 
 jobs:
   subdomains:
