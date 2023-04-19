@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'buy.viasat.com'
+  DOMAIN: 'my.viasat.com'
 
 jobs:
   subdomains:
