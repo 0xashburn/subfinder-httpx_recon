@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'recroom.com'
+  DOMAIN: 'coca-cola.com'
 
 jobs:
   subdomains:
