@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'teslainsuranceservices.com'
+  DOMAIN: 'solarcity.com'
 
 jobs:
   subdomains:
