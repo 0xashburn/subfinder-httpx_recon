@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'proton.me'
+  DOMAIN: 'protonvpn.com'
 
 jobs:
   subdomains:
