@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'solarcity.com'
+  DOMAIN: 'proton.me'
 
 jobs:
   subdomains:
