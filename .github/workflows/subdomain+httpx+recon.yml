@@ -6,7 +6,7 @@ on:
     branches: [ main ]
 
 env:
-  DOMAIN: 'pexels.com'
+  DOMAIN: 'link.co'
 
 jobs:
   subdomains:
